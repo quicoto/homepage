@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricard's Homepage</title>
+  <style>
+    html {
+      font-size: 20px;
+      min-height: 100vh;
+    }
+
+    body {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
+      font-weight: 300;
+      font-size: 1.6rem;
+      padding: 1.5rem;
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 0 0 1.5rem;
+    }
+
+    form {
+      padding-bottom: 2rem;
+    }
+
+    input[type="text"] {
+      padding: 0.5rem;
+      font-size: 1rem;
+      width: 100%;
+
+    }
+
+    input[type="text"]:focus {
+      outline-color: lime;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Hello, Ricard!</h1>
+    <form action="https://search.brave.com/search" method="get">
+      <input type="text" autofocus name="q" placeholder="Brave Search..." value="">
+    </form>
+
+    <form action="https://www.google.com/search" method="get">
+      <input type="text" autofocus name="q" placeholder="Google Search..." value="">
+    </form>
+  </main>
+</body>
+</html>

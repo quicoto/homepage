@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name='robots' content='noindex, nofollow' />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ricard's Homepage</title>
   <style>
+    :root {
+      --primary: #0fd78c;
+    }
+
     html {
       font-size: 20px;
       min-height: 100vh;
@@ -12,51 +17,115 @@
 
     body {
       color: white;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
       background: linear-gradient(-45deg, #162c35 70%, #0c252f 100%);
       font-weight: 300;
-      font-size: 1.6rem;
+      font-size: 1.3rem;
+      line-height: 1.4em;
       padding: 1.5rem;
     }
 
-    main {
+    strong {
+      font-weight: 400;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    a:hover {
+      border: 1px dashed;
+    }
+
+    #search {
       margin: 0 auto;
       max-width: 800px;
     }
 
-    h1 {
+    #links {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    #links a {
+      padding: .2rem .4rem;
+      display: block;
+    }
+
+    h1, h2 {
       font-weight: 400;
+    }
+
+    h1 {
       font-size: 1.6rem;
       text-align: center;
       margin: 0 0 1.5rem;
     }
 
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
     form {
-      padding-bottom: 2rem;
+      padding-bottom: 1.5rem;
     }
 
     input[type="text"] {
       padding: 0.5rem;
       font-size: 1rem;
       width: 100%;
-
     }
 
-    input[type="text"]:focus {
-      outline-color: lime;
+    footer {
+      border-top: solid 1px var(--primary);
+      text-align: center;
+      font-size: 1rem;
+      padding: 1.5rem 0;
     }
   </style>
 </head>
 <body>
   <main>
     <h1>Hello, Ricard!</h1>
-    <form action="https://search.brave.com/search" method="get">
-      <input type="text" autofocus name="q" placeholder="Brave Search..." value="">
-    </form>
+    <section id="search">
+      <form action="https://search.brave.com/search" method="get">
+        <input type="text" autofocus name="q" placeholder="Brave Search..." value="">
+      </form>
 
-    <form action="https://www.google.com/search" method="get">
-      <input type="text" autofocus name="q" placeholder="Google Search..." value="">
-    </form>
+      <form action="https://www.google.com/search" method="get">
+        <input type="text" autofocus name="q" placeholder="Google Search..." value="">
+      </form>
+    </section>
+
+    <section id="links">
+      <section id="bookmarks">
+        <h2>Bookmarks</h2>
+        <ul>
+          <li><a href="https://github.com/quicoto?tab=repositories">GitHub Repositories</a></li>
+          <li><a href="https://ricard.dev/links">Ricard's Links</a></li>
+          <li><a href="https://ricard.dev/wiki">Ricard's Wiki</a></li>
+        </ul>
+      </section>
+
+      <section id="utilities">
+        <h2>Utilities</h2>
+        <ul>
+          <li><a href="https://carbon.now.sh/?bg=rgba%2846%2C48%2C142%2C1%29&t=vscode&wt=none&l=javascript&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=const%2520name%2520%253D%2520%27Ricard%27%253B%250Aconst%2520lastName%2520%253D%2520%27Torres%27%253B%2520%252F%252F%2520Might%2520be%2520null%250A%250Aconst%2520payload%2520%253D%2520%257B%250A%2520%2520name%252C%250A%2520%2520...%28lastName%2520%2526%2526%2520%257B%2520lastName%2520%257D%29%250A%257D%250A%250A%252F%252F%2520VS%250A%250Aif%2520%28lastName%29%2520%257B%250A%2509Object.assign%28payload%252C%2520%257B%2520lastName%2520%257D%29%250A%257D">Carbon: Code Snippet Images</a></li>
+          <li><a href="https://www.quicoto.com/old-posts/">Quicoto Blog - <strong>Old Posts</strong></a></li>
+          <li><a href="https://ricard.dev/examples/33/">Random Password Generator</a></li>
+          <li><a href="https://ricard.dev/examples/year-numbers/">Year in numbers</a></li>
+        </ul>
+      </section>
+    </section>
   </main>
+
+  <footer>
+    <a href="https://github.com/quicoto/homepage">Github</a>
+  </footer>
 </body>
 </html>

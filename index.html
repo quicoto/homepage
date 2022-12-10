@@ -94,11 +94,11 @@
     <h1>Hello, Ricard!</h1>
     <section id="search">
       <form action="https://search.brave.com/search" method="get">
-        <input type="text" autofocus name="q" placeholder="Brave Search..." value="">
+        <input id="brave" type="text" autofocus name="q" placeholder="Brave Search..." value="">
       </form>
 
       <form action="https://www.google.com/search" method="get">
-        <input type="text" autofocus name="q" placeholder="Google Search..." value="">
+        <input id="google" type="text" autofocus name="q" placeholder="Google Search..." value="">
       </form>
     </section>
 
@@ -152,5 +152,15 @@
   <footer>
     <a rel="nofollow" href="https://github.com/quicoto/homepage">Github</a>
   </footer>
+
+  <script>
+    const $brave = document.querySelector('#brave');
+
+    $brave.addEventListener('input', (e) => {
+      if ($brave.value.trim().substring(0, 1) === 'y') {
+        window.location.href = 'https://www.youtube.com/';
+      }
+    });
+  </script>
 </body>
 </html>
